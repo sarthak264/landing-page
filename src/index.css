@@ -1,0 +1,39 @@
+/* ========> Google Fonts <======== */
+/* Open Sans */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+/* Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* ========> Variables <======== */
+:root{
+    /* Colors */
+    --primaryBlack : #121111;
+    --secondayBlack : #1e1e1e;
+    --primaryRed : #e25563;
+    --darkRed : #dc3545;
+    --grey : #6C757D;
+
+    /* Fonts */
+    --montserrat : 'Montserrat', sans-serif;
+    --openSans : 'Open Sans', sans-serif;
+}
+/* ========> Base Styles <======== */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+button{
+    border: none;
+    outline: none;
+}
+li{
+    list-style: none;
+}
+img{
+    width: 100%;
+}
