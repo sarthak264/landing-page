@@ -41,3 +41,28 @@ img{
 .mon{
     font-family: var(--montserrat);
 }
+/* Page */
+.page_wrapper{
+    background-color: var(--primaryBlack);
+    color: #fff;
+}
+@media screen and (min-width: 1200px){
+    .container{
+        max-width: 1140px !important; 
+    }
+}
+/* Navbar */
+.navbar_container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0.75rem;
+}
+.navbar_container .buy_btn{
+    background-color: var(--primaryRed);
+    color: #fff;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.25rem;
+}
