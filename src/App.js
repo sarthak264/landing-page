@@ -31,6 +31,23 @@ function App() {
             className="header_banner"
           />
         </header>
+        {/* Cta */}
+        <section className="cta">
+          <div className="row">
+            <div className="col-md-6 main">
+              <h1 className="callout mon">Start your 30 day free trial.</h1>
+              <button className="sign_up mon">Sign Up</button>
+            </div>
+            <div className="col-md-6 img_container">
+              <img
+                src="./images/start-trial.jpg"
+                alt="trail"
+                className="trial_img"
+              />
+            </div>
+          </div>
+        </section>
+        <hr className="m-0" />
       </div>
     </div>
   );
