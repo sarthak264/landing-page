@@ -33,8 +33,32 @@ function App() {
               className="header_banner"
             />
           </header>
+          {/* Brands */}
+          <section className="brands">
+            <p className="small">Used by industry leaders around the world</p>
+            <div className="row">
+              <div className="col-6 col-md-4 col-lg-2 text-center">
+                <img src="./images/facebook.svg" alt="" className="brand_img" />
+              </div>
+              <div className="col-6 col-md-4 col-lg-2 text-center">
+                <img src="./images/microsoft.svg" alt="" className="brand_img" />
+              </div>
+              <div className="col-6 col-md-4 col-lg-2 text-center">
+                <img src="./images/visa.svg" alt="" className="brand_img" />
+              </div>
+              <div className="col-6 col-md-4 col-lg-2 text-center">
+                <img src="./images/uber.svg" alt="" className="brand_img" />
+              </div>
+              <div className="col-6 col-md-4 col-lg-2 text-center">
+                <img src="./images/coke.svg" alt="" className="brand_img" />
+              </div>
+              <div className="col-6 col-md-4 col-lg-2 text-center">
+                <img src="./images/netflix.svg" alt="" className="brand_img" />
+              </div>
+            </div>
+          </section>
           {/* Cta */}
-          <section className="cta">
+          <div className="cta">
             <div className="row">
               <div className="col-md-6 main">
                 <h1 className="callout mon">Start your 30 day free trial.</h1>
@@ -48,7 +72,7 @@ function App() {
                 />
               </div>
             </div>
-          </section>
+          </div>
           {/* Footer */}
           <hr className="text-white" />
           <footer className="footer">

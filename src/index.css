@@ -41,6 +41,9 @@ img {
 .mon {
   font-family: var(--montserrat);
 }
+section{
+  padding: 5rem 0;
+}
 /* Page */
 .page_wrapper {
   background-color: var(--primaryBlack);
@@ -98,6 +101,39 @@ img {
 .header_banner {
   width: 85%;
 }
+/* brands */
+.brands .small{
+  position: relative;
+  font-weight: 600;
+  padding-left: 5.5rem;
+  transition: all 0.35s ease-in-out;
+}
+.brands .small::before{
+  content: "";
+  width: 5rem;
+  height: 1px;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transition: all 0.3s ease-in-out;
+}
+.brands:hover .small{
+  padding-left: 0rem;
+}
+.brands:hover .small::before{
+  width: 0rem;
+}
+.brands .row{
+  margin-top: 2rem;
+}
+.brands .brand_img{
+  width: auto;
+  cursor: pointer;
+}
+.brands .col-6{
+  margin: 0 0;
+}
 /* cta */
 .cta {
   background-color: var(--secondayBlack);
@@ -138,6 +174,13 @@ img {
   margin-right: 1.5rem;
 }
 @media screen and (max-width: 991px) {
+  section{
+    padding: 2.5rem 0;
+  }
+  /* brands */
+  .brands .col-6{
+    margin: 1rem 0;
+  }
   /* cta */
   .cta {
     margin: 2.5rem 0;
@@ -207,6 +250,10 @@ img {
   }
   .pricing_btn {
     margin: 1rem 0 2rem 0;
+  }
+  /* brands */
+  .brands .col-6{
+    margin: 0.75rem 0;
   }
   /* cta */
   .cta .sign_up {
