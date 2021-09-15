@@ -1,0 +1,61 @@
+.card_wrapper{
+    height: 100%;
+    padding: 3rem;
+    background-color: var(--secondayBlack);
+    border-radius: 0.75rem;
+    transition: all 0.2s ease-in-out;
+}
+.card_wrapper:hover{
+    transform: translateY(-0.25rem);
+}
+.goal .icon_container{
+    padding: 6rem 0;
+    display: flex;
+    justify-content: center;
+}
+.icon_wrapper{
+    height: 11rem;
+    width: 11rem;
+    background-color: var(--primaryRed);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+}
+.goal .icon_wrapper img{
+    width: auto;
+}
+.goal a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    transition: all 0.2s ease-in-out;
+}
+.goal a:hover{
+    color: var(--primaryRed);
+}
+.goal a:hover .icon_circle{
+    background-color: var(--primaryRed);
+}
+.goal a .icon_circle{
+    height: 2.5rem;
+    width: 2.5rem;
+    background-color: #fff;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    margin-right: 0.75rem;
+    transition: all 0.2s ease-in-out;
+}
+@media screen and (max-width:576px){
+    .card_wrapper{
+        padding: 1rem;
+    }
+}
+@media screen and (max-width:991px) and (min-width:768px){
+    .card_wrapper{
+        padding: 1.5rem;
+    }
+}

@@ -2,6 +2,8 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import { useState } from "react";
 import { BrowserRouter, Link } from "react-router-dom";
 import { features } from "./components/features";
+import Card from "./components/Card";
+import Heading from "./components/Heading";
 
 function App() {
   const [value, setValue] = useState(0);
@@ -65,13 +67,26 @@ function App() {
               </div>
             </div>
           </section>
+          {/* goals section */}
+          <section className="goal">
+            <Heading />
+            <div className="row justify-content-center">
+              <div className="col-sm-10 col-md-6 col-xl-6 mb-4 mb-md-0">
+                <Card
+                  icon="cloud"
+                  title="Cloud sharing platform for designers"
+                />
+              </div>
+              <div className="col-sm-10 col-md-6 col-xl-6">
+                <Card 
+                icon="volt" 
+                title="Supercharged with new plugins" />
+              </div>
+            </div>
+          </section>
           {/* features */}
           <section className="features">
-            <h1 className="display-4 fw-bold">Trusted by millions of users.</h1>
-            <p className="lead">
-              The main goal was to further improve Sketch user interface for a
-              non-obstructive workflow while maintaining familiarity.
-            </p>
+            <Heading />
             <div className="row">
               <div className="col-12 col-lg-4">
                 <div className="btn_container">

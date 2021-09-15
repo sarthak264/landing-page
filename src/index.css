@@ -135,11 +135,6 @@ section{
   margin: 0 0;
 }
 /* features */
-.features .lead{
-  font-weight: 500;
-  padding-right: 20%;
-  margin-bottom: 3rem;
-}
 .btn_container{
   height: 100%;
   display: flex;
@@ -242,9 +237,6 @@ section{
     margin: 1rem 0;
   }
   /* features */
-  .features .lead{
-    margin-bottom: 2rem;
-  }
   .features .btn{
     margin: 0.75rem 0;
   }
@@ -287,10 +279,6 @@ section{
   }
   .pricing_btn {
     margin: 1rem 0 3rem 0 !important;
-  }
-  /* features */
-  .features .lead{
-    padding-right: 0;
   }
   /* cta */
   .cta .sign_up {
@@ -336,10 +324,6 @@ section{
     margin: 0.75rem 0;
   }
   /* features */
-  .features .lead{
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
-  }
   .features .btn{
     padding: 1rem;
   }
