@@ -1,7 +1,11 @@
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import { useState } from "react";
 import { BrowserRouter, Link } from "react-router-dom";
+import { features } from "./components/features";
 
 function App() {
+  const [value, setValue] = useState(0);
+
   return (
     <BrowserRouter>
       <div className="page_wrapper">
@@ -41,7 +45,11 @@ function App() {
                 <img src="./images/facebook.svg" alt="" className="brand_img" />
               </div>
               <div className="col-6 col-md-4 col-lg-2 text-center">
-                <img src="./images/microsoft.svg" alt="" className="brand_img" />
+                <img
+                  src="./images/microsoft.svg"
+                  alt=""
+                  className="brand_img"
+                />
               </div>
               <div className="col-6 col-md-4 col-lg-2 text-center">
                 <img src="./images/visa.svg" alt="" className="brand_img" />
@@ -57,6 +65,45 @@ function App() {
               </div>
             </div>
           </section>
+          {/* features */}
+          <section className="features">
+            <h1 className="display-4 fw-bold">Trusted by millions of users.</h1>
+            <p className="lead">
+              The main goal was to further improve Sketch user interface for a
+              non-obstructive workflow while maintaining familiarity.
+            </p>
+            <div className="row">
+              <div className="col-12 col-lg-4">
+                <div className="btn_container">
+                  {features.map((item, index) => {
+                    return (
+                      <button
+                        className={`btn ${value === index && `active`}`}
+                        onClick={() => {
+                          setValue(index);
+                        }}
+                      >
+                        <h3>{item.title}</h3>
+                        <p className="small mb-0">{item.subtitle}</p>
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+              <div className="col-12 col-lg-8">
+                {features.map((item, index) => {
+                  return (
+                    <img
+                      src={features[value].img}
+                      alt="sass tab"
+                      className={`feature_img ${value === index && `active`}`}
+                    />
+                  );
+                })}
+              </div>
+            </div>
+          </section>
+          <hr className="m-0" />
           {/* Cta */}
           <div className="cta">
             <div className="row">
