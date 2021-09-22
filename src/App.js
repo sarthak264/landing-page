@@ -1,12 +1,24 @@
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { BrowserRouter, Link } from "react-router-dom";
 import { features } from "./components/features";
 import Card from "./components/Card";
 import Heading from "./components/Heading";
+import { review } from "./components/reviews";
 
 function App() {
   const [value, setValue] = useState(0);
+  const [person, setPerson] = useState(0);
+
+  useEffect(() => {
+    const lastPerson = review.length - 1;
+    if (person < 0) {
+      setPerson(lastPerson);
+    }
+    if (person > lastPerson) {
+      setPerson(0);
+    }
+  }, [person]);
 
   return (
     <BrowserRouter>
@@ -78,9 +90,7 @@ function App() {
                 />
               </div>
               <div className="col-sm-10 col-md-6 col-xl-6">
-                <Card 
-                icon="volt" 
-                title="Supercharged with new plugins" />
+                <Card icon="volt" title="Supercharged with new plugins" />
               </div>
             </div>
           </section>
@@ -117,6 +127,51 @@ function App() {
                 })}
               </div>
             </div>
+          </section>
+          <hr className="m-0" />
+          {/* review */}
+          <section className="review">
+            <button
+              className="prevbtn"
+              onClick={() => {
+                setPerson(person - 1);
+              }}
+            >
+              <img src="./images/prev.svg" alt="prev" className="prev_btn" />
+            </button>
+            <button
+              className="nextbtn"
+              onClick={() => {
+                setPerson(person + 1);
+              }}
+            >
+              <img src="./images/next.svg" alt="prev" className="next_btn" />
+            </button>
+            {review.map((item, index) => {
+              let className = "next";
+              if (person === index) {
+                className = "current";
+              }
+              if (
+                index === person - 1 ||
+                (person === 0 && index === review.length - 1)
+              ) {
+                className = "prev";
+              }
+              return (
+                <>
+                  <div
+                    className={`review_wrapper text-center ${className}`}
+                    key={index}
+                  >
+                    <img src={item.image} alt="company" className="mb-4" />
+                    <p className="main">{item.detail}</p>
+                    <p className="main mb-0">{item.name}</p>
+                    <p className="">{item.post}</p>
+                  </div>
+                </>
+              );
+            })}
           </section>
           <hr className="m-0" />
           {/* Cta */}
