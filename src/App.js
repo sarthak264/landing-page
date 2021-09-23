@@ -5,6 +5,7 @@ import { features } from "./components/features";
 import Card from "./components/Card";
 import Heading from "./components/Heading";
 import { review } from "./components/reviews";
+import { dnd } from "./components/dnd";
 
 function App() {
   const [value, setValue] = useState(0);
@@ -82,10 +83,12 @@ function App() {
           {/* drag and drop section */}
           <section className="dnd">
             <div className="row">
-              <div className="col-lg-6">
-                <p className="lead fw-bold mon mb-2">Drag and drop</p>
-                <h1 className="fw-bold mon mb-4">Drag and drop components</h1>
-                <p className="lead text mb-4">
+              <div className="col-md-6">
+                <p className="lead fw-bold mon mb-1 mb-sm-2">Drag and drop</p>
+                <h1 className="fw-bold mon mb-2 mb-sm-4">
+                  Drag and drop components
+                </h1>
+                <p className="lead text mb-3 mb-sm-4">
                   The main goal was to further improve Sketch user interface for
                   a non-obstructive workflow while maintaining familiarity.
                 </p>
@@ -113,7 +116,25 @@ function App() {
                   </svg>
                 </Link>
               </div>
-              <div className="col-lg-6"></div>
+              <div className="col-md-6 icons_wrapper">
+                {dnd.map((item, index) => {
+                  return (
+                    <>
+                      <div className="icon_container py-3">
+                        {item.map((item2, index2) => {
+                          return (
+                            <>
+                              <Link to="/">
+                                <img src={item2.img} alt="" />
+                              </Link>
+                            </>
+                          );
+                        })}
+                      </div>
+                    </>
+                  );
+                })}
+              </div>
             </div>
           </section>
           {/* goals section */}

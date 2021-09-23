@@ -152,6 +152,32 @@ section {
   transition: all 0.2s ease-in-out;
   fill: white;
 }
+.dnd .icons_wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.dnd .icon_container {
+  background-color: var(--secondayBlack);
+  margin: 0 1.4rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+}
+.dnd .icon_container a {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+.dnd .icon_container a:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 2rem;
+}
+.dnd .icon_container img {
+  width: auto;
+  padding: 1.5rem 0;
+}
 /* features */
 .btn_container {
   height: 100%;
@@ -296,6 +322,10 @@ section {
   .brands .col-6 {
     margin: 1rem 0;
   }
+  /* dnd */
+  .dnd .icon_container {
+    margin: 0.5rem;
+  }
   /* features */
   .features .btn {
     margin: 0.75rem 0;
@@ -339,6 +369,13 @@ section {
   }
   .pricing_btn {
     margin: 1rem 0 3rem 0 !important;
+  }
+  /* dnd */
+  .dnd .icons_wrapper {
+    margin-top: 1rem;
+  }
+  .dnd .icon_container {
+    margin: 1.5rem;
   }
   /* reviews */
   .review {
@@ -385,6 +422,10 @@ section {
   }
   .pricing_btn {
     margin: 1rem 0 2rem 0;
+  }
+  /* dnd */
+  .dnd .icon_container {
+    margin: 0.4rem;
   }
   /* features */
   .features .btn {
