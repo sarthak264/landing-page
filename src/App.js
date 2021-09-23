@@ -4,6 +4,7 @@ import { BrowserRouter, Link } from "react-router-dom";
 import { features } from "./components/features";
 import Card from "./components/Card";
 import Heading from "./components/Heading";
+import Price_card from "./components/Price_card";
 import { review } from "./components/reviews";
 import { dnd } from "./components/dnd";
 
@@ -232,6 +233,23 @@ function App() {
             })}
           </section>
           <hr className="m-0" />
+          {/* pricing */}
+          <section className="pricing text-center">
+            <h1 className="display-2 fw-bold mon mb-2 mb-sm-3">
+              Simple licensing
+            </h1>
+            <h4 className="subtitle fw-bold mon">
+              Flexible pricing for individuals and startups
+            </h4>
+            <Price_card title="Enterprise" price="24" />
+            <Price_card title="Starter" price="12" />
+            <p className="small caption">
+              This order process is provided by Brand name, who handle all
+              payment services, invoicing and download links. Need more
+              information? You can always reach us at
+              <Link to="/">support@email.com</Link>
+            </p>
+          </section>
           {/* Cta */}
           <div className="cta">
             <div className="row">
