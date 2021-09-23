@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const Price_card = (props) => {
+const PriceCard = (props) => {
   const Card = styled.div`
     background-color: var(--secondayBlack);
     padding: 3.5rem 4.5rem;
@@ -70,4 +70,4 @@ const Price_card = (props) => {
   );
 };
 
-export default Price_card;
+export default PriceCard;

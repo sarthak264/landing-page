@@ -4,7 +4,7 @@ import { BrowserRouter, Link } from "react-router-dom";
 import { features } from "./components/features";
 import Card from "./components/Card";
 import Heading from "./components/Heading";
-import Price_card from "./components/Price_card";
+import PriceCard from "./components/PriceCard";
 import { review } from "./components/reviews";
 import { dnd } from "./components/dnd";
 import Aos from "aos";
@@ -276,8 +276,8 @@ function App() {
             >
               Flexible pricing for individuals and startups
             </h4>
-            <Price_card title="Enterprise" price="24" />
-            <Price_card title="Starter" price="12" />
+            <PriceCard title="Enterprise" price="24" />
+            <PriceCard title="Starter" price="12" />
             <p className="small caption" data-aos="fade-up">
               This order process is provided by Brand name, who handle all
               payment services, invoicing and download links. Need more
