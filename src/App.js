@@ -7,11 +7,16 @@ import Heading from "./components/Heading";
 import Price_card from "./components/Price_card";
 import { review } from "./components/reviews";
 import { dnd } from "./components/dnd";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 function App() {
   const [value, setValue] = useState(0);
   const [person, setPerson] = useState(0);
 
+  useEffect(() => {
+    Aos.init({ duration: 1300, delay: 200, once: true });
+  }, []);
   useEffect(() => {
     const lastPerson = review.length - 1;
     if (person < 0) {
@@ -27,7 +32,7 @@ function App() {
       <div className="page_wrapper">
         <div className="container">
           {/* Navbar */}
-          <navbar className="navbar_container">
+          <navbar className="navbar_container" data-aos="fade-down">
             <Link to="/">
               <img src="./images/logo-white.svg" alt="logo" />
             </Link>
@@ -37,24 +42,27 @@ function App() {
           <header className="header text-center">
             <div className="row justify-content-center">
               <div className="col-lg-10 col-xl-8">
-                <h1 className="heading mon mb-3 mb-sm-4">
+                <h1 className="heading mon mb-3 mb-sm-4" data-aos="fade-down">
                   Harnessing the power of müse.
                 </h1>
-                <h2 className="subheading mon">
+                <h2 className="subheading mon" data-aos="fade-up">
                   Design, prototype, collaborate, and bring your ideas to life
                   with the world.
                 </h2>
               </div>
             </div>
-            <button className="pricing_btn mon">See Pricing</button>
+            <button className="pricing_btn mon" data-aos="fade-up">
+              See Pricing
+            </button>
             <img
               src="./images/saas-banner.jpg"
               alt="banner"
               className="header_banner"
+              data-aos="zoom-in-up"
             />
           </header>
           {/* Brands */}
-          <section className="brands">
+          <section className="brands" data-aos="fade-up">
             <p className="small">Used by industry leaders around the world</p>
             <div className="row">
               <div className="col-6 col-md-4 col-lg-2 text-center">
@@ -84,7 +92,11 @@ function App() {
           {/* drag and drop section */}
           <section className="dnd">
             <div className="row">
-              <div className="col-md-6">
+              <div
+                className="col-md-6"
+                data-aos="fade-right"
+                data-aos-delay="500"
+              >
                 <p className="lead fw-bold mon mb-1 mb-sm-2">Drag and drop</p>
                 <h1 className="fw-bold mon mb-2 mb-sm-4">
                   Drag and drop components
@@ -117,7 +129,11 @@ function App() {
                   </svg>
                 </Link>
               </div>
-              <div className="col-md-6 icons_wrapper">
+              <div
+                className="col-md-6 icons_wrapper"
+                data-aos="fade-left"
+                data-aos-delay="500"
+              >
                 {dnd.map((item, index) => {
                   return (
                     <>
@@ -142,13 +158,21 @@ function App() {
           <section className="goal">
             <Heading />
             <div className="row justify-content-center">
-              <div className="col-sm-10 col-md-6 col-xl-6 mb-4 mb-md-0">
+              <div
+                className="col-sm-10 col-md-6 col-xl-6 mb-4 mb-md-0"
+                data-aos="fade-right"
+                // data-aos-delay="500"
+              >
                 <Card
                   icon="cloud"
                   title="Cloud sharing platform for designers"
                 />
               </div>
-              <div className="col-sm-10 col-md-6 col-xl-6">
+              <div
+                className="col-sm-10 col-md-6 col-xl-6"
+                data-aos="fade-left"
+                // data-aos-delay="500"
+              >
                 <Card icon="volt" title="Supercharged with new plugins" />
               </div>
             </div>
@@ -157,7 +181,7 @@ function App() {
           <section className="features">
             <Heading />
             <div className="row">
-              <div className="col-12 col-lg-4">
+              <div className="col-12 col-lg-4" data-aos="fade-right">
                 <div className="btn_container">
                   {features.map((item, index) => {
                     return (
@@ -174,7 +198,7 @@ function App() {
                   })}
                 </div>
               </div>
-              <div className="col-12 col-lg-8">
+              <div className="col-12 col-lg-8" data-aos="fade-left">
                 {features.map((item, index) => {
                   return (
                     <img
@@ -189,12 +213,13 @@ function App() {
           </section>
           <hr className="m-0" />
           {/* review */}
-          <section className="review">
+          <section className="review" data-aos="fade-up">
             <button
               className="prevbtn"
               onClick={() => {
                 setPerson(person - 1);
               }}
+              data-aos="fade-right"
             >
               <img src="./images/prev.svg" alt="prev" className="prev_btn" />
             </button>
@@ -203,6 +228,7 @@ function App() {
               onClick={() => {
                 setPerson(person + 1);
               }}
+              data-aos="fade-left"
             >
               <img src="./images/next.svg" alt="prev" className="next_btn" />
             </button>
@@ -235,23 +261,32 @@ function App() {
           <hr className="m-0" />
           {/* pricing */}
           <section className="pricing text-center">
-            <h1 className="display-2 fw-bold mon mb-2 mb-sm-3">
+            <h1
+              className="display-2 fw-bold mon mb-2 mb-sm-3"
+              data-aos="fade-down"
+              data-aos-duration="1200"
+            >
               Simple licensing
             </h1>
-            <h4 className="subtitle fw-bold mon">
+            <h4
+              className="subtitle fw-bold mon"
+              data-aos="fade-down"
+              data-aos-duration="1400"
+              data-aos-delay="400"
+            >
               Flexible pricing for individuals and startups
             </h4>
             <Price_card title="Enterprise" price="24" />
             <Price_card title="Starter" price="12" />
-            <p className="small caption">
+            <p className="small caption" data-aos="fade-up">
               This order process is provided by Brand name, who handle all
               payment services, invoicing and download links. Need more
               information? You can always reach us at
-              <Link to="/">support@email.com</Link>
+              <Link to="/"> support@email.com</Link>
             </p>
           </section>
           {/* Cta */}
-          <div className="cta">
+          <div className="cta" data-aos="fade-up" data-aos-delay="400">
             <div className="row">
               <div className="col-md-6 main">
                 <h1 className="callout mon">Start your 30 day free trial.</h1>

@@ -18,7 +18,7 @@ const Lead = styled.p`
 
 const Heading = () => {
   return (
-    <div className="heading">
+    <div className="heading" data-aos="fade-down">
       <h1 className="display-4 fw-bold">Trusted by millions of users.</h1>
       <Lead className="lead">
         The main goal was to further improve Sketch user interface for a

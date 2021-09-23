@@ -43,6 +43,7 @@ img {
 }
 section {
   padding: 5rem 0;
+  overflow: hidden;
 }
 /* Page */
 .page_wrapper {
@@ -322,6 +323,7 @@ section {
 /* footer */
 .footer {
   padding: 1rem 0 3rem 0;
+  overflow: hidden;
 }
 .footer .icon_container {
   display: flex;
