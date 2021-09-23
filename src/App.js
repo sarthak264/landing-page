@@ -79,6 +79,43 @@ function App() {
               </div>
             </div>
           </section>
+          {/* drag and drop section */}
+          <section className="dnd">
+            <div className="row">
+              <div className="col-lg-6">
+                <p className="lead fw-bold mon mb-2">Drag and drop</p>
+                <h1 className="fw-bold mon mb-4">Drag and drop components</h1>
+                <p className="lead text mb-4">
+                  The main goal was to further improve Sketch user interface for
+                  a non-obstructive workflow while maintaining familiarity.
+                </p>
+                <Link to="/">
+                  See Integrations
+                  <svg
+                    className="ms-2 icon"
+                    data-name="icons/tabler/chevron right"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="10"
+                    height="10"
+                    viewBox="0 0 16 16"
+                  >
+                    <rect
+                      data-name="Icons/Tabler/Chevron Right background"
+                      width="16"
+                      height="16"
+                      fill="none"
+                    ></rect>
+                    <path
+                      d="M.26.26A.889.889,0,0,1,1.418.174l.1.086L8.629,7.371a.889.889,0,0,1,.086,1.157l-.086.1L1.517,15.74A.889.889,0,0,1,.174,14.582l.086-.1L6.743,8,.26,1.517A.889.889,0,0,1,.174.36Z"
+                      transform="translate(4)"
+                      fill="#dc3545"
+                    ></path>
+                  </svg>
+                </Link>
+              </div>
+              <div className="col-lg-6"></div>
+            </div>
+          </section>
           {/* goals section */}
           <section className="goal">
             <Heading />

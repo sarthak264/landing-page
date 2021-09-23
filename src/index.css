@@ -134,6 +134,24 @@ section {
 .brands .col-6 {
   margin: 0 0;
 }
+/* drag and drop */
+.dnd .lead.text {
+  font-weight: 500;
+  line-height: 1.6;
+}
+.dnd a {
+  color: var(--primaryRed);
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+.dnd a:hover {
+  color: #fff;
+}
+.dnd a:hover .icon path {
+  transition: all 0.2s ease-in-out;
+  fill: white;
+}
 /* features */
 .btn_container {
   height: 100%;
